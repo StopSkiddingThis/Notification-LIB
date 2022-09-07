@@ -1,0 +1,96 @@
+-- Created By Swopt#3077
+-- Notification For Legosmoke Private
+
+-- Instances:
+
+local NOTIFY = Instance.new("ScreenGui")
+local Notification = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local warning = Instance.new("ImageButton")
+local glow = Instance.new("ImageLabel")
+local Frame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Text = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+NOTIFY.Name = "NOTIFY"
+NOTIFY.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NOTIFY.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Notification.Name = "Notification"
+Notification.Parent = NOTIFY
+Notification.BackgroundColor3 = Color3.fromRGB(46, 33, 81)
+Notification.BackgroundTransparency = 0.200
+Notification.Position = UDim2.new(0.772843838, 0, 0.83203125, 0)
+Notification.Size = UDim2.new(0, 302, 0, 115)
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = Notification
+warning.Name = "warning"
+warning.Parent = Notification
+warning.BackgroundTransparency = 1.000
+warning.Position = UDim2.new(0.0537639633, 0, 0.0569408052, 0)
+warning.Size = UDim2.new(0, 25, 0, 25)
+warning.ZIndex = 2
+warning.Image = "rbxassetid://6764432408"
+warning.ImageColor3 = Color3.fromRGB(231, 76, 191)
+warning.ImageRectOffset = Vector2.new(0, 900)
+warning.ImageRectSize = Vector2.new(50, 50)
+glow.Name = "glow"
+glow.Parent = warning
+glow.BackgroundColor3 = Color3.fromRGB(231, 76, 191)
+glow.BackgroundTransparency = 1.000
+glow.Position = UDim2.new(-0.611611307, 0, -0.501928687, 0)
+glow.Size = UDim2.new(0, 56, 0, 57)
+glow.Image = "rbxassetid://9313765853"
+glow.ImageColor3 = Color3.fromRGB(231, 76, 191)
+glow.ScaleType = Enum.ScaleType.Slice
+glow.SliceCenter = Rect.new(45, 45, 45, 45)
+Frame.Parent = Notification
+Frame.BackgroundColor3 = Color3.fromRGB(209, 209, 209)
+Frame.BorderColor3 = Color3.fromRGB(209, 209, 209)
+Frame.Position = UDim2.new(-0.000495152781, 0, 0.944525599, 0)
+Frame.Size = UDim2.new(0, 302, 0, 6)
+UICorner_2.CornerRadius = UDim.new(0, 2)
+UICorner_2.Parent = Frame
+Title.Name = "Title"
+Title.Parent = Notification
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.158000007, 0, 0.100000001, 0)
+Title.Size = UDim2.new(0, 175, 0, 16)
+Title.Font = Enum.Font.GothamBold
+Title.Text = "Notification"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Text.Name = "Text"
+Text.Parent = Notification
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.Position = UDim2.new(0.0454833172, 0, 0.276089609, 0)
+Text.Size = UDim2.new(0, 271, 0, 31)
+Text.Font = Enum.Font.GothamMedium
+Text.Text = "Succesfuly Loaded Legosmoke Private"
+Text.TextColor3 = Color3.fromRGB(212, 212, 212)
+Text.TextScaled = true
+Text.TextSize = 14.000
+Text.TextWrapped = true
+Text.TextXAlignment = Enum.TextXAlignment.Left
+TextButton.Parent = Notification
+TextButton.BackgroundColor3 = Color3.fromRGB(79, 57, 140)
+TextButton.BackgroundTransparency = 0.200
+TextButton.Position = UDim2.new(0.0463576168, 0, 0.623915672, 0)
+TextButton.Size = UDim2.new(0, 271, 0, 26)
+TextButton.AutoButtonColor = false
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "   Close"
+TextButton.TextColor3 = Color3.fromRGB(234, 234, 234)
+TextButton.TextSize = 14.000
+TextButton.TextXAlignment = Enum.TextXAlignment.Left
+UICorner_3.CornerRadius = UDim.new(0, 19)
+UICorner_3.Parent = TextButton
+TextButton.MouseButton1Down:Connect(function()
+	Notification:TweenPosition(UDim2.new(1,0,0.832,0))
+end)
